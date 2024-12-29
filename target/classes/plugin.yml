@@ -1,0 +1,18 @@
+name: InfernWarp
+version: '1.0'
+main: org.infernworld.infernwarp.InfernWarp
+api-version: '1.16'
+commands:
+  setwarp:
+    description: Устанавливает варп на текущей позиции
+    usage: /<command> <warpname>
+  warp:
+    description: Перемещает игрока к указанному варпу
+    usage: /<command> <warpname>
+  delwarp:
+    description: Удаляет варп
+    usage: /<command> <warpname>
+permissions:
+  infernwarp.setwarp.<кол-во варпов>:
+    description: Ограничение на количество варпов
+    default: op

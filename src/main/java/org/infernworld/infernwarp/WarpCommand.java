@@ -32,6 +32,10 @@ public class WarpCommand implements CommandExecutor {
         }
         Player player = (Player) sender;
         if (cmd.getName().equalsIgnoreCase("setwarp")) {
+            if (!player.hasPermission("infernwarp.warpset")) {
+                player.sendMessage(InfernWarp.getCfg().getString("message.del-not-perms"));
+                return true;
+            }
             if (args.length == 0) {
                 player.sendMessage(InfernWarp.getCfg().getString("message.setwarp-not-name"));
                 return true;
